@@ -5,7 +5,7 @@ use esp_backtrace as _;
 use esp_hal::{
     delay::Delay,
     gpio::{Level, Output},
-    main
+    main,
 };
 use esp_println::println;
 

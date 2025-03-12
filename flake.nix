@@ -37,6 +37,12 @@
               rustup default ${rustVersion}
             fi
 
+            # Set up Rust language server
+            if ! rustup component list --installed | grep -q "rust-analyzer"; then
+              echo "🔧 Installing rust-analyzer...";
+              rustup component add rust-analyzer
+            fi
+
             # Install ESP development prerequesites
             espup install
 
