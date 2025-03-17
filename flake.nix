@@ -17,6 +17,7 @@
       mkDevShell = system:
         let 
           pkgs = import nixpkgs {system = system;};
+
           rustVersion = "1.84.0";
         in pkgs.mkShell {
           # Establish the required binaries and libraries for embedded Rust development
